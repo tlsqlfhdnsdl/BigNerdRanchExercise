@@ -55,6 +55,8 @@ class ConversionViewController: UIViewController {
         textField.resignFirstResponder()
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -86,5 +88,22 @@ class ConversionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension ConversionViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        print("Current text: \(textField.text)")
+//        print("Replacement text: \(string)")
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        if existingTextHasDecimalSeparator != nil, replacementTextHasDecimalSeparator != nil {
+            return false
+        }
+        for character in string.unicodeScalars {
+            if NSCharacterSet.letters.contains(character){
+                return false
+            }
+        }
+        return true
+    }
 }
