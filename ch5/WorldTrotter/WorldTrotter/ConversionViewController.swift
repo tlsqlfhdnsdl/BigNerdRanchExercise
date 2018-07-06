@@ -64,6 +64,12 @@ class ConversionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let time = Calendar.current.component(.hour, from: Date())
+        let weight = time < 12 ? (CGFloat(time))/12 : (24 - CGFloat(time))/12
+        self.view.backgroundColor = UIColor.init(red: weight, green: weight, blue: weight, alpha: 1)
+    }
+    
     func updateCelsius() {
         if let celsiusValue = celsiusValue {
             celsiusLabel.text = numberFormatter.string(from: NSNumber(value: celsiusValue.value))
