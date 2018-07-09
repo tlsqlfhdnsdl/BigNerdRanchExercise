@@ -11,7 +11,23 @@
   class ItemsTableViewController: UITableViewController {
 
     var itemStore: ItemStore!
+    
+    var lowerValueItem: [Item] {
+      return itemStore.allItems.filter {$0.valueInDollars <= 50}
+    }
+    var highValueItem: [Item] {
+      return itemStore.allItems.filter {$0.valueInDollars > 50}
+    }
 
+    func isLastRow(indexPath: IndexPath) -> Bool {
+      if (indexPath.section == 1 && indexPath.row == lowerValueItem.count) {
+        return true
+      }
+      else {
+        return false
+      }
+    }
+    
     override func viewDidLoad() {
       super.viewDidLoad()
       
@@ -20,7 +36,12 @@
       let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
       tableView.contentInset = insets
       tableView.scrollIndicatorInsets = insets
-
+//      let tempFrame = self.tableView.frame
+      let imageView = UIImageView(image: #imageLiteral(resourceName: "CocoaHeads"))
+      imageView.contentMode = .scaleAspectFit
+      tableView.backgroundView = imageView
+      
+      
       // Uncomment the following line to preserve selection between presentations
       // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,27 +58,41 @@
 
     override func numberOfSections(in tableView: UITableView) -> Int {
       // #warning Incomplete implementation, return the number of sections
-      return 1
+      return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       // #warning Incomplete implementation, return the number of rows
-      return itemStore.allItems.count
+      return (section == 0 ? highValueItem.count : lowerValueItem.count + 1)
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //      let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableVIewCell")
-    
-      let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-      let item = itemStore.allItems[indexPath.row]
-    
-      cell.textLabel?.text = item.name
-      cell.detailTextLabel?.text = "$\(item.valueInDollars)"
-    
+      let cell : UITableViewCell
+      
+      if (isLastRow(indexPath: indexPath)) {
+        cell = tableView.dequeueReusableCell(withIdentifier: "EmptyTableViewCell", for: indexPath)
+      } else {
+        let item : Item
+        cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        if (indexPath.section == 0) {
+          item = highValueItem[indexPath.row]
+        }
+        else {
+          item = lowerValueItem[indexPath.row]
+        }
+        
+        cell.textLabel?.text = item.name
+        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+      }
+      cell.backgroundColor = UIColor.clear
       return cell
     }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      return (isLastRow(indexPath: indexPath) ? 44 : 60)
+    }
 
     /*
     // Override to support conditional editing of the table view.

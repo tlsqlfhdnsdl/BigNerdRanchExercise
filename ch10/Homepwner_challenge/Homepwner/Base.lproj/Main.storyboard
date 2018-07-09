@@ -26,17 +26,34 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kpA-fy-Zqx">
-                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="16" y="12" width="36.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MTa-A9-C9f">
                                             <rect key="frame" x="315" y="12" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmptyTableViewCell" textLabel="90T-Yx-9ul" style="IBUITableViewCellStyleDefault" id="VkF-nR-OaI">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VkF-nR-OaI" id="Ieo-Ur-sYr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="No more items!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="90T-Yx-9ul">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

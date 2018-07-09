@@ -10,20 +10,32 @@ import Foundation
 
 class ItemStore {
     
-    var allItems = [Item]()
-    
-    init() {
-        for _ in 0..<5 {
-            createItem()
-        }
+  var allItems = [Item]()
+
+  init() {
+    for _ in 0..<5 {
+        createItem()
     }
-    
-    @discardableResult func createItem() -> Item {
-        let newItem = Item(random: true)
-        
-        allItems.append(newItem)
-        
-        return newItem
+  }
+
+  @discardableResult func createItem() -> Item {
+    let newItem = Item(random: true)
+  
+    allItems.append(newItem)
+  
+    return newItem
+  }
+  
+  func itemsBy(value: Int, over: Bool) -> [Item] {
+    var items = [Item]()
+    for item in allItems {
+      if (over && item.valueInDollars > value) {
+        items.append(item)
+      }
+      else if (!over && item.valueInDollars <= value) {
+        items.append(item)
+      }
     }
-    
+    return items
+  }  
 }
