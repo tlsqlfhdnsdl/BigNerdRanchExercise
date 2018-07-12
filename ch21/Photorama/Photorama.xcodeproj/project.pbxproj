@@ -17,6 +17,11 @@
 		CB7B47E520F73F0500CF5ED2 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B47E420F73F0500CF5ED2 /* FlickrAPI.swift */; };
 		CB7B47E720F7479700CF5ED2 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B47E620F7479700CF5ED2 /* PhotoStore.swift */; };
 		CB7B47E920F74FAD00CF5ED2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B47E820F74FAD00CF5ED2 /* Photo.swift */; };
+		CB7B47EB20F76CF600CF5ED2 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B47EA20F76CF600CF5ED2 /* PhotoDataSource.swift */; };
+		CB7B47ED20F7718200CF5ED2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B47EC20F7718200CF5ED2 /* PhotoCollectionViewCell.swift */; };
+		CB7B47EF20F7827000CF5ED2 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B47EE20F7827000CF5ED2 /* ImageStore.swift */; };
+		CB7B47F120F7846C00CF5ED2 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B47F020F7846C00CF5ED2 /* PhotoInfoViewController.swift */; };
+		CB7B47F320F7899B00CF5ED2 /* PhotoCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B47F220F7899B00CF5ED2 /* PhotoCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		CB7B47E420F73F0500CF5ED2 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		CB7B47E620F7479700CF5ED2 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		CB7B47E820F74FAD00CF5ED2 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		CB7B47EA20F76CF600CF5ED2 /* PhotoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		CB7B47EC20F7718200CF5ED2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB7B47EE20F7827000CF5ED2 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		CB7B47F020F7846C00CF5ED2 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
+		CB7B47F220F7899B00CF5ED2 /* PhotoCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,11 @@
 				CB7B47E420F73F0500CF5ED2 /* FlickrAPI.swift */,
 				CB7B47E620F7479700CF5ED2 /* PhotoStore.swift */,
 				CB7B47E820F74FAD00CF5ED2 /* Photo.swift */,
+				CB7B47EA20F76CF600CF5ED2 /* PhotoDataSource.swift */,
+				CB7B47EE20F7827000CF5ED2 /* ImageStore.swift */,
+				CB7B47EC20F7718200CF5ED2 /* PhotoCollectionViewCell.swift */,
+				CB7B47F020F7846C00CF5ED2 /* PhotoInfoViewController.swift */,
+				CB7B47F220F7899B00CF5ED2 /* PhotoCollectionViewLayout.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -268,8 +283,13 @@
 				CB7B47E520F73F0500CF5ED2 /* FlickrAPI.swift in Sources */,
 				CB7B47E320F73A4300CF5ED2 /* PhotosViewController.swift in Sources */,
 				CB7B47E720F7479700CF5ED2 /* PhotoStore.swift in Sources */,
+				CB7B47EF20F7827000CF5ED2 /* ImageStore.swift in Sources */,
+				CB7B47EB20F76CF600CF5ED2 /* PhotoDataSource.swift in Sources */,
+				CB7B47ED20F7718200CF5ED2 /* PhotoCollectionViewCell.swift in Sources */,
 				CB7B47B520F7391800CF5ED2 /* AppDelegate.swift in Sources */,
 				CB7B47E920F74FAD00CF5ED2 /* Photo.swift in Sources */,
+				CB7B47F120F7846C00CF5ED2 /* PhotoInfoViewController.swift in Sources */,
+				CB7B47F320F7899B00CF5ED2 /* PhotoCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
